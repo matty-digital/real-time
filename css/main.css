@@ -1,0 +1,70 @@
+html, body {
+  font-family: helvetica, sans-serif;
+  margin: 0;
+  background: #eee;
+  overflow-x: hidden;
+}
+
+.liquidFillGaugeText {
+  font-weight: bold;
+}
+
+.gauge {
+  padding: 15px 0;
+  display: flex;
+  text-align: center;
+  border-left: 4px solid #FCAB10;
+  border-right: 4px solid #FCAB10;
+}
+
+.gauge p {
+  margin: 0;
+}
+
+.gauge.large {
+  background: #fff;
+}
+
+.gauge.med, .gauge.sm {
+  background: #fff;
+}
+
+.gauge.med {
+  border-bottom: 4px solid #FCAB10;
+}
+
+.fillgauge {
+  margin: 0 15px;
+}
+
+.btn-group {
+  margin-top: 15px;
+}
+
+.btn-group .update {
+  text-align: center;
+  color: #fff;
+  padding: 20px 0;
+  background: #FCAB10;
+  font-weight: bold;
+}
+
+.svg-holder {
+  flex: 1;
+  text-align: center;
+}
+
+.svg-holder p {
+  margin: 0;
+  padding-bottom: 5px;
+  color: #FCAB10;
+  font-weight: bold;
+}
+
+header p {
+  font-weight: bold;
+  color: #fff;
+  background: #FCAB10;
+  margin: 0;
+  padding: 15px;
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>chart</title>
+    <link rel="stylesheet" href="./css/main.css">
+  </head>
+  <body>
+    <header>
+      <p>ROOM TEMPERATURE</p>
+    </header>
+    <div class="gauge large">
+      <div class="svg-holder">
+        <svg class="fillgauge" id="fillgauge1" width="70%" height="180" onclick="gauge1.update(NewValue());"></svg>
+      </div>
+    </div>
+    <header>
+      <p>AIR &amp; ENERGY</p>
+    </header>
+    <div class="gauge sm">
+      <div class="svg-holder">
+        <svg class="fillgauge" id="fillgauge4" width="60%" height="110"></svg>
+        <p>0<sub>2</sub></p>
+      </div>
+      <div class="svg-holder">
+        <svg class="fillgauge" id="fillgauge5" width="60%" height="110" onclick="gauge5.update(NewValue());"></svg>
+        <p>C0<sub>2</sub></p>
+      </div>
+      <div class="svg-holder">
+        <svg class="fillgauge" id="fillgauge6" width="60%" height="110" onclick="gauge6.update(NewValue());"></svg>
+        <p>NRG</p>
+      </div>
+    </div>
+    <header>
+      <p>AVGS OVER TIME</p>
+    </header>
+    <div class="gauge med">
+      <div class="svg-holder">
+        <svg class="fillgauge" id="fillgauge2" width="50%" height="120" onclick="gauge2.update(NewValue());"></svg>
+        <p>10 min</p>
+      </div>
+      <div class="svg-holder">
+        <svg class="fillgauge" id="fillgauge3" width="50%" height="120" onclick="gauge3.update(NewValue());"></svg>
+        <p>60 min</p>
+      </div>
+    </div>
+
+    <div class="btn-group">
+      <div id="refresh" class="update">
+        REFRESH DATA
+      </div>
+    </div>
+
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/gauges.js"></script>
+
+    <script>
+      document.getElementById('refresh').addEventListener('click', function() {
+        location.reload();
+      });
+    </script>
+  </body>
+</html>
